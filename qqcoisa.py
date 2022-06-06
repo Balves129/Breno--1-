@@ -15,17 +15,22 @@ janela.config(bg="white")
 janela.minsize(width= 200, height= 200)
 janela.maxsize(width= 2000, height= 2000)
 
-label3 = Label(janela, text="",
-               font = "Arial 20 ",bg="white", foreground="blue")
+#06/06 
+fr1= Frame(janela, bg='white')
+fr2= Frame(janela,bg='white')
 
-label1 = Label(janela, text="AULÃO DO BRENO 2022",
+label3 = Label(fr2, text="", font = "Arial 20 ",bg="white", foreground="blue")
+
+label1 = Label(fr1, text="AULÃO DO BRENO 2022",
                font = "Algerian 47 ", bg="white",foreground="Blue")
-label2= Label(janela, text="+",font="Arial 20", foreground="blue" , bg='white')
-entry1= Entry(janela, font= "Rockwell 20")
-entry2= Entry(janela, font= "Rockwell 20")
-btn1 = Button(janela, text="somar", font='Rockwell 40', foreground= "blue", bg='white',command=somar)
+label2= Label(fr1, text="+",font="Arial 20", foreground="blue" , bg='white')
+entry1= Entry(fr1, font= "Rockwell 20")
+entry2= Entry(fr2, font= "Rockwell 20")
+btn1 = Button(fr2, text="somar", font='Rockwell 40', foreground= "blue", bg='white',command=somar)
 
 
+fr1.pack()
+fr2.pack()
 label1.pack(side=TOP)
 label3.pack(side=TOP)
 entry1.pack(side=TOP)
