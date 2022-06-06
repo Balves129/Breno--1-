@@ -15,7 +15,7 @@ def calcular():
     try:
         resultado = eval(lb['text'])
         lb['text'] = str(resultado)
-        lb['foreground'] = 'Green'
+        lb['foreground'] = 'Black'
     except ZeroDivisionError:
         lb['text'] = 'Conta Inválida'
         lb['foreground'] = 'Red'    
@@ -61,7 +61,7 @@ janela.bind('8', lambda event: clicar(valor='8'))
 janela.bind('9', lambda event: clicar(valor='9'))
 janela.bind('+', lambda event: clicar(valor='+'))
 janela.bind('-', lambda event: clicar(valor='-'))
-janela.bind('', lambda event: clicar(valor=''))
+janela.bind('*', lambda event: clicar(valor='*'))
 janela.bind('/', lambda event: clicar(valor='/'))
 janela.bind('<Return>', lambda event: calcular())
 janela.bind('(', lambda event: clicar(valor='('))
@@ -87,7 +87,7 @@ bt_somar = Button(janela, text='+',bg='white', font='40', command=lambda: clicar
 bt_subtrair = Button(janela, text='-', bg='white', font='40', command=lambda:clicar('-'))
 bt_mult = Button(janela, text='', bg='white',font='40', command=lambda:clicar(''))
 bt_div = Button(janela, text='/',bg='white', font='40', command=lambda:clicar('/'))
-bt_igual = Button(janela,text='=', bg='#6c757d', foreground='Black', font='40', command=lambda: calcular())
+bt_igual = Button(janela,text='=', bg='white', foreground='Black', font='40', command=lambda: calcular())
 bt_ponto = Button(janela, text='.',bg='white', font='40', command=lambda:clicar('.'))
 bt_del = Button(janela, text='Del', bg='white', font='40', command=lambda:apagar_um())
 bt_pd = Button(janela, text='(', bg='white', font='40', command=lambda:clicar('('))
@@ -116,5 +116,3 @@ bt_pd.grid(row=5, column=2, sticky=NSEW)
 bt_pe.grid(row=5, column=3, sticky=NSEW)
 
 janela.mainloop()
- 
- 
